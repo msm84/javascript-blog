@@ -44,3 +44,36 @@ const links = document.querySelectorAll('.titles a');
 for (let link of links) {
     link.addEventListener('click', titleClickHandler);
 }
+
+// Submodule 5.4 //
+
+const optArticleSelector = '.post',
+    optTitleSelector = '.post-title',
+    optTitleListSelector = '.titles';
+
+function generateTitleLinks() {
+
+    /* remove contents of titleList */
+    const titleList = document.querySelector(optTitleListSelector);
+    titleList.innerHTML = '';
+
+    /* for each article */
+    const articles = optArticleSelector;
+
+    for (let article of articles) {} //nie rozumiem, co ma robić ta pętla//
+
+    /* get the article id */
+    const articleId = this.getAttribute("id"); // tutaj do poprawy - nie działa //
+    console.log('pobrano atrybuty ID');
+
+    /* find the title element */
+
+    /* get the title from the title element */
+
+    /* create HTML of the link */
+
+    /* insert link into titleList */
+
+}
+
+generateTitleLinks();
