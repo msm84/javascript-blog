@@ -29,9 +29,14 @@ function titleClickHandler(event) {
     const articleSelector = clickedElement.getAttribute("href");
     console.log(articleSelector);
 
-    /* find the correct article using the selector (value of 'href' attribute) / znajdź na stronie element pasujący do selektora takiego, jak wartość atrybutu href, np. #article-2 – czyli szukamy elementu o id="article-2" */
+    /* [DONE] find the correct article using the selector (value of 'href' attribute) / znajdź na stronie element pasujący do selektora takiego, jak wartość atrybutu href, np. #article-2 – czyli szukamy elementu o id="article-2" */
 
-    /* add class 'active' to the correct article / dodaj klasę active do znalezionego artykułu.*/
+    const targetArticle = document.querySelector(articleSelector);
+    console.log(targetArticle);
+
+    /* [DONE] add class 'active' to the correct article / dodaj klasę active do znalezionego artykułu.*/
+
+    targetArticle.classList.add('active');
 }
 
 const links = document.querySelectorAll('.titles a');
