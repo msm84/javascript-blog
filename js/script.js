@@ -2,6 +2,7 @@
 
 function titleClickHandler(event) {
     console.log('Link was clicked!');
+    event.preventDefault(); //blokowanie domyślnej akcji//
     const clickedElement = this;
     console.log(event);
 
@@ -12,9 +13,8 @@ function titleClickHandler(event) {
         activeLink.classList.remove('active');
     }
 
-    /* [IN PROGRESS] add class 'active' to the clicked link */
+    /* [DONE] add class 'active' to the clicked link */
     console.log('clickedElement:', clickedElement);
-
     clickedElement.classList.add('active');
 
     /* [DONE] remove class 'active' from all articles */
@@ -24,11 +24,14 @@ function titleClickHandler(event) {
         activeArticle.classList.remove('active');
     }
 
-    /* get 'href' attribute from the clicked link */
+    /* [DONE] get 'href' attribute from the clicked link / z klikniętego linka weź zawartość atrybutu href, np. #article-2*/
 
-    /* find the correct article using the selector (value of 'href' attribute) */
+    const articleSelector = clickedElement.getAttribute("href");
+    console.log(articleSelector);
 
-    /* add class 'active' to the correct article */
+    /* find the correct article using the selector (value of 'href' attribute) / znajdź na stronie element pasujący do selektora takiego, jak wartość atrybutu href, np. #article-2 – czyli szukamy elementu o id="article-2" */
+
+    /* add class 'active' to the correct article / dodaj klasę active do znalezionego artykułu.*/
 }
 
 const links = document.querySelectorAll('.titles a');
